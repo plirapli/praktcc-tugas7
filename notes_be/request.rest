@@ -1,4 +1,4 @@
-POST https://notes-backend-wijdan-13926268988.us-central1.run.app/register
+POST http://localhost:5000/notes
 Content-Type: application/json
 
 {
@@ -8,7 +8,7 @@ Content-Type: application/json
 }
 
 ###
-POST https://notes-backend-wijdan-13926268988.us-central1.run.app/login
+POST http://localhost:5000/notes
 Content-Type: application/json
 
 {
