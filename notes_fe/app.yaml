@@ -1,5 +1,9 @@
 runtime: nodejs20
+<<<<<<< HEAD
 service: notes-frontend  # ganti nama service kalau mau
+=======
+service: notes-frontend # ganti nama service kalau mau
+>>>>>>> 24fab1219b808e2959ad4e738a541a31efd9f494
 instance_class: F1
 
 handlers:
