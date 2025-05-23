@@ -1,17 +1,15 @@
 import { Sequelize } from "sequelize";
-import "dotenv/config";
+import { getEnv } from "../utils.js";
 
-import fs from "node:fs";
-fs.readFile(".env", "utf8", (err, data) => {
-  if (err) {
-    console.error(err);
-    return;
-  }
-  console.log(data);
-});
+const {
+  DB_HOST: host,
+  DB_NAME: name,
+  DB_USERNAME: username,
+  DB_PASSWORD: password,
+} = getEnv();
 
-const db = new Sequelize("tugas_notes", "root", "inipassword", {
-  host: "104.154.138.53",
+const db = new Sequelize(name, username, password, {
+  host: host,
   dialect: "mysql",
 });
 
