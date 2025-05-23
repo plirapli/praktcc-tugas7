@@ -3,15 +3,7 @@ steps:
     args: ["cp", "${_ENV}", ".env"]
     dir: "notes_be"
   - name: "gcr.io/cloud-builders/docker"
-    args:
-      [
-        "build",
-        "--cache-from",
-        "gcr.io/$PROJECT_ID/notes-backend",
-        "-t",
-        "gcr.io/$PROJECT_ID/notes-backend:${SHORT_SHA}",
-        ".",
-      ]
+    args: ["build", "-t", "gcr.io/$PROJECT_ID/notes-backend:${SHORT_SHA}", "."]
     dir: "notes_be"
   - name: "gcr.io/cloud-builders/docker"
     args: ["push", "gcr.io/$PROJECT_ID/notes-backend:${SHORT_SHA}"]
