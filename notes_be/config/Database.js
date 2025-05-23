@@ -8,9 +8,7 @@ const {
   DB_NAME: database,
 } = process.env;
 
-console.log(
-  `tessssssssssssssss: ${host}, ${database}, ${username}, ${password}`
-);
+console.log(`tesss: ${process.env}, ${database}, ${username}, ${password}`);
 
 const db = new Sequelize("tugas_notes", "root", "inipassword", {
   host: "104.154.138.53",
