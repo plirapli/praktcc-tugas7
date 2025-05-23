@@ -10,7 +10,9 @@ const {
   DB_NAME: database,
 } = process.env;
 
-console.log(host, database, username, password);
+console.log(
+  `tessssssssssssssss: ${host}, ${database}, ${username}, ${password}`
+);
 
 const db = new Sequelize(database, username, password, {
   host,
