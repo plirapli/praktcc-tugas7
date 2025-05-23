@@ -1,8 +1,13 @@
 import { Sequelize } from "sequelize";
 import "dotenv/config";
 
-Object.keys(process.env).forEach((val) => {
-  console.log(val + ": " + process.env[val]);
+import fs from "node:fs";
+fs.readFile(".env", "utf8", (err, data) => {
+  if (err) {
+    console.error(err);
+    return;
+  }
+  console.log(data);
 });
 
 const db = new Sequelize("tugas_notes", "root", "inipassword", {
