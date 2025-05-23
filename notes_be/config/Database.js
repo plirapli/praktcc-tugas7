@@ -1,7 +1,5 @@
 import { Sequelize } from "sequelize";
-import dotenv from "dotenv";
-
-dotenv.config();
+import "dotenv/config";
 
 const {
   DB_HOST: host,
@@ -14,8 +12,8 @@ console.log(
   `tessssssssssssssss: ${host}, ${database}, ${username}, ${password}`
 );
 
-const db = new Sequelize(database, username, password, {
-  host,
+const db = new Sequelize("tugas_notes", "root", "inipassword", {
+  host: "104.154.138.53",
   dialect: "mysql",
 });
 
