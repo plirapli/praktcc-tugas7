@@ -1,9 +1,18 @@
 import { Sequelize } from "sequelize";
+import dotenv from "dotenv";
 
-// Konfigurasi database ditulis manual
-const db = new Sequelize("tugas_notes", "root", "inipassword", {
-  host: "104.154.138.53",
-  dialect: "mysql",
+dotenv.config();
+
+const {
+  DB_HOST: host,
+  DB_USERNAME: username,
+  DB_PASSWORD: password,
+  DB_NAME: database,
+} = process.env;
+
+const db = new Sequelize(database, username, password, {
+  host,
+  dialect: "mysql",
 });
 
 export default db;
