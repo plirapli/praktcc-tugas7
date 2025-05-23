@@ -1,6 +1,7 @@
 steps:
   - name: "gcr.io/cloud-builders/gsutil"
     args: ["cp", "${_ENV}", ".env"]
+    dir: "notes_be"
   - name: "gcr.io/cloud-builders/docker"
     args:
       [
