@@ -11,6 +11,7 @@ steps:
         "gcr.io/$PROJECT_ID/notes-backend:${SHORT_SHA}",
         ".",
       ]
+    dir: "notes_be"
   - name: "gcr.io/cloud-builders/docker"
     args: ["push", "gcr.io/$PROJECT_ID/notes-backend:${SHORT_SHA}"]
   - name: "gcr.io/cloud-builders/gcloud"
